@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0BACD117FDF3BC00672898 /* Toolbag.m */; };
+		5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */; };
+		5FBD0AD117FB5FA200532A24 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBD0AD017FB5FA200532A24 /* Player.m */; };
+		5FBD0AD717FB788B00532A24 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBD0AD617FB788B00532A24 /* Board.m */; };
+		5FC35FD717931A7A00FAE88A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FD617931A7A00FAE88A /* UIKit.framework */; };
+		5FC35FD917931A7A00FAE88A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FD817931A7A00FAE88A /* Foundation.framework */; };
+		5FC35FDB17931A7A00FAE88A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FDA17931A7A00FAE88A /* CoreGraphics.framework */; };
+		5FC35FE117931A7A00FAE88A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FDF17931A7A00FAE88A /* InfoPlist.strings */; };
+		5FC35FE317931A7A00FAE88A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC35FE217931A7A00FAE88A /* main.m */; };
+		5FC35FE717931A7A00FAE88A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC35FE617931A7A00FAE88A /* AppDelegate.m */; };
+		5FC35FE917931A7A00FAE88A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FE817931A7A00FAE88A /* Default.png */; };
+		5FC35FEB17931A7A00FAE88A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FEA17931A7A00FAE88A /* Default@2x.png */; };
+		5FC35FED17931A7A00FAE88A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FEC17931A7A00FAE88A /* Default-568h@2x.png */; };
+		5FC35FF017931A7A00FAE88A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FEE17931A7A00FAE88A /* MainStoryboard_iPhone.storyboard */; };
+		5FC35FF317931A7A00FAE88A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC35FF117931A7A00FAE88A /* MainStoryboard_iPad.storyboard */; };
+		5FC35FF617931A7A00FAE88A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC35FF517931A7A00FAE88A /* ViewController.m */; };
+		5FC35FFE17931A7A00FAE88A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FFD17931A7A00FAE88A /* SenTestingKit.framework */; };
+		5FC35FFF17931A7A00FAE88A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FD617931A7A00FAE88A /* UIKit.framework */; };
+		5FC3600017931A7A00FAE88A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC35FD817931A7A00FAE88A /* Foundation.framework */; };
+		5FC3600817931A7B00FAE88A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FC3600617931A7B00FAE88A /* InfoPlist.strings */; };
+		5FC3600B17931A7B00FAE88A /* TrickTackyToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3600A17931A7B00FAE88A /* TrickTackyToeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FC3600117931A7A00FAE88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FC35FCB17931A7A00FAE88A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FC35FD217931A7A00FAE88A;
+			remoteInfo = TrickTackyToe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F0BACD017FDF3BC00672898 /* Toolbag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toolbag.h; sourceTree = "<group>"; };
+		5F0BACD117FDF3BC00672898 /* Toolbag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toolbag.m; sourceTree = "<group>"; };
+		5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButton_SquareButton.m; sourceTree = "<group>"; };
+		5FBD0ACF17FB5FA100532A24 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		5FBD0AD017FB5FA200532A24 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		5FBD0AD517FB788A00532A24 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		5FBD0AD617FB788B00532A24 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		5FC35FD317931A7A00FAE88A /* Tango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tango.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC35FD617931A7A00FAE88A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5FC35FD817931A7A00FAE88A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5FC35FDA17931A7A00FAE88A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5FC35FDE17931A7A00FAE88A /* Tango-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tango-Info.plist"; sourceTree = "<group>"; };
+		5FC35FE017931A7A00FAE88A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FC35FE217931A7A00FAE88A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5FC35FE417931A7A00FAE88A /* Tango-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tango-Prefix.pch"; sourceTree = "<group>"; };
+		5FC35FE517931A7A00FAE88A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5FC35FE617931A7A00FAE88A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5FC35FE817931A7A00FAE88A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5FC35FEA17931A7A00FAE88A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5FC35FEC17931A7A00FAE88A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5FC35FEF17931A7A00FAE88A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5FC35FF217931A7A00FAE88A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5FC35FF417931A7A00FAE88A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5FC35FF517931A7A00FAE88A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5FC35FFC17931A7A00FAE88A /* TangoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TangoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC35FFD17931A7A00FAE88A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5FC3600517931A7B00FAE88A /* TangoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TangoTests-Info.plist"; sourceTree = "<group>"; };
+		5FC3600717931A7B00FAE88A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FC3600917931A7B00FAE88A /* TrickTackyToeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrickTackyToeTests.h; sourceTree = "<group>"; };
+		5FC3600A17931A7B00FAE88A /* TrickTackyToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrickTackyToeTests.m; sourceTree = "<group>"; };
+		5FD983B61799D9F900845799 /* UIButton_SquareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButton_SquareButton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FC35FD017931A7A00FAE88A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC35FD717931A7A00FAE88A /* UIKit.framework in Frameworks */,
+				5FC35FD917931A7A00FAE88A /* Foundation.framework in Frameworks */,
+				5FC35FDB17931A7A00FAE88A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FC35FF817931A7A00FAE88A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC35FFE17931A7A00FAE88A /* SenTestingKit.framework in Frameworks */,
+				5FC35FFF17931A7A00FAE88A /* UIKit.framework in Frameworks */,
+				5FC3600017931A7A00FAE88A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FC35FCA17931A7A00FAE88A = {
+			isa = PBXGroup;
+			children = (
+				5FC35FDC17931A7A00FAE88A /* Tango */,
+				5FC3600317931A7A00FAE88A /* TangoTests */,
+				5FC35FD517931A7A00FAE88A /* Frameworks */,
+				5FC35FD417931A7A00FAE88A /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		5FC35FD417931A7A00FAE88A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FC35FD317931A7A00FAE88A /* Tango.app */,
+				5FC35FFC17931A7A00FAE88A /* TangoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FC35FD517931A7A00FAE88A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FC35FD617931A7A00FAE88A /* UIKit.framework */,
+				5FC35FD817931A7A00FAE88A /* Foundation.framework */,
+				5FC35FDA17931A7A00FAE88A /* CoreGraphics.framework */,
+				5FC35FFD17931A7A00FAE88A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FC35FDC17931A7A00FAE88A /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				5FC35FE517931A7A00FAE88A /* AppDelegate.h */,
+				5FC35FE617931A7A00FAE88A /* AppDelegate.m */,
+				5FD983B61799D9F900845799 /* UIButton_SquareButton.h */,
+				5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */,
+				5FC35FEE17931A7A00FAE88A /* MainStoryboard_iPhone.storyboard */,
+				5FC35FF117931A7A00FAE88A /* MainStoryboard_iPad.storyboard */,
+				5FC35FF417931A7A00FAE88A /* ViewController.h */,
+				5FC35FF517931A7A00FAE88A /* ViewController.m */,
+				5FC35FDD17931A7A00FAE88A /* Supporting Files */,
+				5FBD0AD517FB788A00532A24 /* Board.h */,
+				5FBD0AD617FB788B00532A24 /* Board.m */,
+				5FBD0ACF17FB5FA100532A24 /* Player.h */,
+				5FBD0AD017FB5FA200532A24 /* Player.m */,
+				5F0BACD017FDF3BC00672898 /* Toolbag.h */,
+				5F0BACD117FDF3BC00672898 /* Toolbag.m */,
+			);
+			name = Tango;
+			path = TrickTackyToe;
+			sourceTree = "<group>";
+		};
+		5FC35FDD17931A7A00FAE88A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FC35FDE17931A7A00FAE88A /* Tango-Info.plist */,
+				5FC35FDF17931A7A00FAE88A /* InfoPlist.strings */,
+				5FC35FE217931A7A00FAE88A /* main.m */,
+				5FC35FE417931A7A00FAE88A /* Tango-Prefix.pch */,
+				5FC35FE817931A7A00FAE88A /* Default.png */,
+				5FC35FEA17931A7A00FAE88A /* Default@2x.png */,
+				5FC35FEC17931A7A00FAE88A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FC3600317931A7A00FAE88A /* TangoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FC3600917931A7B00FAE88A /* TrickTackyToeTests.h */,
+				5FC3600A17931A7B00FAE88A /* TrickTackyToeTests.m */,
+				5FC3600417931A7B00FAE88A /* Supporting Files */,
+			);
+			name = TangoTests;
+			path = TrickTackyToeTests;
+			sourceTree = "<group>";
+		};
+		5FC3600417931A7B00FAE88A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FC3600517931A7B00FAE88A /* TangoTests-Info.plist */,
+				5FC3600617931A7B00FAE88A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FC35FD217931A7A00FAE88A /* Tango */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FC3600E17931A7B00FAE88A /* Build configuration list for PBXNativeTarget "Tango" */;
+			buildPhases = (
+				5FC35FCF17931A7A00FAE88A /* Sources */,
+				5FC35FD017931A7A00FAE88A /* Frameworks */,
+				5FC35FD117931A7A00FAE88A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tango;
+			productName = TrickTackyToe;
+			productReference = 5FC35FD317931A7A00FAE88A /* Tango.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FC35FFB17931A7A00FAE88A /* TangoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FC3601117931A7B00FAE88A /* Build configuration list for PBXNativeTarget "TangoTests" */;
+			buildPhases = (
+				5FC35FF717931A7A00FAE88A /* Sources */,
+				5FC35FF817931A7A00FAE88A /* Frameworks */,
+				5FC35FF917931A7A00FAE88A /* Resources */,
+				5FC35FFA17931A7A00FAE88A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FC3600217931A7A00FAE88A /* PBXTargetDependency */,
+			);
+			name = TangoTests;
+			productName = TrickTackyToeTests;
+			productReference = 5FC35FFC17931A7A00FAE88A /* TangoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FC35FCB17931A7A00FAE88A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Tic;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Patrik Göthe & Ville Petersson";
+			};
+			buildConfigurationList = 5FC35FCE17931A7A00FAE88A /* Build configuration list for PBXProject "Tango" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5FC35FCA17931A7A00FAE88A;
+			productRefGroup = 5FC35FD417931A7A00FAE88A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FC35FD217931A7A00FAE88A /* Tango */,
+				5FC35FFB17931A7A00FAE88A /* TangoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FC35FD117931A7A00FAE88A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC35FE117931A7A00FAE88A /* InfoPlist.strings in Resources */,
+				5FC35FE917931A7A00FAE88A /* Default.png in Resources */,
+				5FC35FEB17931A7A00FAE88A /* Default@2x.png in Resources */,
+				5FC35FED17931A7A00FAE88A /* Default-568h@2x.png in Resources */,
+				5FC35FF017931A7A00FAE88A /* MainStoryboard_iPhone.storyboard in Resources */,
+				5FC35FF317931A7A00FAE88A /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FC35FF917931A7A00FAE88A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC3600817931A7B00FAE88A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FC35FFA17931A7A00FAE88A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FC35FCF17931A7A00FAE88A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC35FE317931A7A00FAE88A /* main.m in Sources */,
+				5FC35FE717931A7A00FAE88A /* AppDelegate.m in Sources */,
+				5FC35FF617931A7A00FAE88A /* ViewController.m in Sources */,
+				5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */,
+				5FBD0AD117FB5FA200532A24 /* Player.m in Sources */,
+				5FBD0AD717FB788B00532A24 /* Board.m in Sources */,
+				5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FC35FF717931A7A00FAE88A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC3600B17931A7B00FAE88A /* TrickTackyToeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FC3600217931A7A00FAE88A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FC35FD217931A7A00FAE88A /* Tango */;
+			targetProxy = 5FC3600117931A7A00FAE88A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FC35FDF17931A7A00FAE88A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FC35FE017931A7A00FAE88A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5FC35FEE17931A7A00FAE88A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FC35FEF17931A7A00FAE88A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5FC35FF117931A7A00FAE88A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FC35FF217931A7A00FAE88A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5FC3600617931A7B00FAE88A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FC3600717931A7B00FAE88A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FC3600C17931A7B00FAE88A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FC3600D17931A7B00FAE88A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FC3600F17931A7B00FAE88A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrickTackyToe/Tango-Prefix.pch";
+				INFOPLIST_FILE = "TrickTackyToe/Tango-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = Tango;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5FC3601017931A7B00FAE88A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrickTackyToe/Tango-Prefix.pch";
+				INFOPLIST_FILE = "TrickTackyToe/Tango-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = Tango;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5FC3601217931A7B00FAE88A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrickTackyToe.app/TrickTackyToe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrickTackyToe/TrickTackyToe-Prefix.pch";
+				INFOPLIST_FILE = "TrickTackyToeTests/TangoTests-Info.plist";
+				PRODUCT_NAME = TangoTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5FC3601317931A7B00FAE88A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrickTackyToe.app/TrickTackyToe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrickTackyToe/TrickTackyToe-Prefix.pch";
+				INFOPLIST_FILE = "TrickTackyToeTests/TangoTests-Info.plist";
+				PRODUCT_NAME = TangoTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FC35FCE17931A7A00FAE88A /* Build configuration list for PBXProject "Tango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FC3600C17931A7B00FAE88A /* Debug */,
+				5FC3600D17931A7B00FAE88A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FC3600E17931A7B00FAE88A /* Build configuration list for PBXNativeTarget "Tango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FC3600F17931A7B00FAE88A /* Debug */,
+				5FC3601017931A7B00FAE88A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FC3601117931A7B00FAE88A /* Build configuration list for PBXNativeTarget "TangoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FC3601217931A7B00FAE88A /* Debug */,
+				5FC3601317931A7B00FAE88A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FC35FCB17931A7A00FAE88A /* Project object */;
+}
