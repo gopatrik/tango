@@ -11,6 +11,7 @@
 #import "Player.h"
 #import "Board.h"
 #import "Toolbag.h"
+#import "TangoController.h"
 
 @interface ViewController ();
 
@@ -21,6 +22,7 @@
 	Player *playerTwo;
 	Player *currentPlayer;
 	NSMutableArray *boards;
+	TangoController *tangoController;
 }
 @synthesize mainView;
 
@@ -29,6 +31,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	tangoController = [[TangoController alloc] initWithView:self];
+	
 	int squaresPerPlane = 9;
 	boards = [[NSMutableArray alloc] initWithCapacity:9];
 	

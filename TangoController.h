@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIButton_SquareButton.h"
+#import "ViewController.h"
 
 @interface TangoController : NSObject
+@property (nonatomic) ViewController *mainView;
 
+- (void) squarePressed:(SquareButton*) button;
+- (TangoController*) initWithView:(ViewController*)view;
 @end
