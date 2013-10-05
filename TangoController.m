@@ -26,6 +26,13 @@
 	playerOne = [[Player alloc] initWithName:@"patrik" andColor:[Toolbag colorFromHexString:@"#C15B40"]];
 	playerTwo = [[Player alloc] initWithName:@"simon" andColor:[Toolbag colorFromHexString:@"#7EAAB4"]];
 	
+	[[[self mainView] playerOneName] setText:[playerOne name]];
+	[[[self mainView] playerTwoName] setText:[playerTwo name]];
+
+	[[[self mainView] playerOneName] setBackgroundColor:[playerOne color]];
+	[[[self mainView] playerTwoName] setBackgroundColor:[playerTwo color]];
+
+	
 	currentPlayer = playerOne;
 	return self;
 }
@@ -51,7 +58,7 @@
 		}
 		
 		// Animate click
-		[[self mainView] animateClick:button];
+		[[self mainView] animateClick:button withColor:[currentPlayer color]];
 		
 		// Change color of button
 		[button setBackgroundColor:[currentPlayer color]];

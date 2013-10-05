@@ -14,5 +14,5 @@
 @property IBOutlet UILabel *playerOneName;
 @property IBOutlet UILabel *playerTwoName;
 
-- (void) animateClick:(SquareButton*) button;
+- (void) animateClick:(SquareButton*) button withColor:(UIColor*)color;
 @end
