@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Toolbag : NSObject
+
+
 + (UIColor*)colorFromHexString:(NSString *) hexString;
 @end

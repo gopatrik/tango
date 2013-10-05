@@ -10,6 +10,8 @@
 #import "Toolbag.h"
 
 @implementation Board
+
+static UIColor *squareColor;
 static NSMutableArray *boards;
 
 - (id)init
@@ -17,13 +19,14 @@ static NSMutableArray *boards;
     self = [super init];
 	
     if (self) {
+		squareColor = [Toolbag colorFromHexString:@"#eeeeee"];
 		int squareSideCount = 3;
 		[self setSquares:[[NSMutableArray alloc] initWithCapacity:squareSideCount*squareSideCount]];
 
 		for (int row = 0; row<squareSideCount; row++) {
 			for (int col = 0; col<squareSideCount; col++) {
 				SquareButton *button = [[SquareButton alloc] initWithPosX:row andY:col];
-				[button setBackgroundColor:[Toolbag colorFromHexString:@"#FCF9EF"]];
+				[button setBackgroundColor:squareColor];
 				
 				// add
 				[[self squares] addObject:button];
@@ -64,7 +67,7 @@ static NSMutableArray *boards;
 	for (SquareButton *sq in [board squares]) {
 		if(![sq isOccupied]){
 			[UIView animateWithDuration:0.1 animations:^{
-				[sq setBackgroundColor: [Toolbag colorFromHexString:@"#84D6C1"]];
+				[sq setBackgroundColor: [Toolbag colorFromHexString:@"#A7EFDB"]];
 			} completion:NO];
 		}
 	}
@@ -74,7 +77,7 @@ static NSMutableArray *boards;
 	for (SquareButton *sq in [board squares]) {
 		if(![sq isOccupied]){
 			[UIView animateWithDuration:0.1 animations:^{
-				[sq setBackgroundColor: [Toolbag colorFromHexString:@"#FCF9EF"]];
+				[sq setBackgroundColor: squareColor];
 			} completion:NO];
 		}
 	}

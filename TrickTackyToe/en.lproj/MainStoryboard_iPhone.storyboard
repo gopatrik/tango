@@ -13,42 +13,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="44f-yj-sxr">
-                                <rect key="frame" x="0.0" y="228" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UZn-GJ-qHN">
-                                <rect key="frame" x="20" y="109" width="69" height="69"/>
+                                <rect key="frame" x="46" y="31" width="69" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="playerone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PTg-IP-Pdv">
-                                <rect key="frame" x="20" y="109" width="69" height="69"/>
+                                <rect key="frame" x="46" y="31" width="69" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="playertwo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tkY-HS-eUK">
-                                <rect key="frame" x="231" y="109" width="69" height="69"/>
+                                <rect key="frame" x="205" y="31" width="69" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" id="Hmi-Ur-yaM">
-                                <rect key="frame" x="20" y="9" width="280" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="mainView" destination="44f-yj-sxr" id="8Ub-Wz-zOo"/>
-                        <outlet property="playerDataView" destination="Hmi-Ur-yaM" id="1cJ-Ca-nVK"/>
                         <outlet property="playerOneName" destination="PTg-IP-Pdv" id="hgk-m1-o6v"/>
                         <outlet property="playerTurnAnimation" destination="UZn-GJ-qHN" id="uF7-S4-m44"/>
                         <outlet property="playerTwoName" destination="tkY-HS-eUK" id="ujX-S2-Vtp"/>
@@ -63,7 +57,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="playerDataView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="playerOneName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="playerTurnAnimation" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="playerTwoName" candidateClass="UILabel"/>

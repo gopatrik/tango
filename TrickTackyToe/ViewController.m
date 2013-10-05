@@ -31,7 +31,7 @@
 	
 	int squaresPerPlane = 9;
 	
-	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#dddddd"]];
+	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#bdbdbd"]];
 
 	CGFloat buttonsize = mainView.bounds.size.width/(squaresPerPlane);
 
@@ -79,12 +79,14 @@
 	[tangoController squarePressed:button];
 }
 
-- (void) animateTurnCircleTo:(CGPoint)xy {
-	CGFloat delta = ([[self playerTurnAnimation] center].x > xy.x) ? -5 : 5;
+- (void) animateTurnCircleTo:(CGPoint)xy withColor:(UIColor *)color{
+	CGFloat delta = ([[self playerTurnAnimation] center].x > xy.x) ? -8 : 8;
 	CGPoint bounceDelta = CGPointMake(xy.x + delta, xy.y);
 	
-	[UIView animateWithDuration:0.28 animations:^{
+	[UIView animateWithDuration:0.2 animations:^{
 		[[self playerTurnAnimation] setCenter:bounceDelta];
+		[[self playerTurnAnimation] setBackgroundColor:color]; // cant animate this
+		//[[[self playerTurnAnimation] layer] setBackgroundColor:[color CGColor]];
 	}completion:^(BOOL finished) {
 		[UIView animateWithDuration:0.05 animations:^{
 			[[self playerTurnAnimation] setCenter:xy];
