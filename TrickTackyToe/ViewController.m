@@ -99,17 +99,25 @@
 }
 
 - (void) animateClick:(SquareButton*) button withColor:(UIColor *)color{
-	int constant = 6;
-	int halfConstant = 3;
+	CGFloat constant = button.frame.size.width;//12;
+	CGFloat halfConstant = constant/2;
 	
-	[UIView animateWithDuration:0.02 animations:^{
-		[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y+halfConstant, button.frame.size.width-constant, button.frame.size.height-constant)];
+	[UIView animateWithDuration:0.1 animations:^{
+		//[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y+halfConstant, button.frame.size.width-constant, button.frame.size.height-constant)];
 		
-		[button setBackgroundColor:color];
+		[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y, 0, button.frame.size.height)];
+		
+		
+//		[button setBackgroundColor:color];
 		
 	} completion:^(BOOL finished) {
-		[UIView animateWithDuration:0.05 animations:^{ // delay:0.01 options:NO
-			[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y-halfConstant, button.frame.size.width+constant, button.frame.size.height+constant)];
+		[UIView animateWithDuration:0.1 animations:^{
+			[button setBackgroundColor:color];
+			//[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y-halfConstant, button.frame.size.width+constant, button.frame.size.height+constant)];
+			
+			[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y, constant, button.frame.size.height)];
+			
+			
 		} completion:NO];
 	}];
 }

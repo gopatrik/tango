@@ -19,14 +19,18 @@ static NSMutableArray *boards;
     self = [super init];
 	
     if (self) {
-		squareColor = [Toolbag colorFromHexString:@"#eeeeee"];
+		squareColor = [Toolbag colorFromHexString:@"#fcfcfc"];
+		
 		int squareSideCount = 3;
 		[self setSquares:[[NSMutableArray alloc] initWithCapacity:squareSideCount*squareSideCount]];
 
+		BOOL even = false;
 		for (int row = 0; row<squareSideCount; row++) {
 			for (int col = 0; col<squareSideCount; col++) {
 				SquareButton *button = [[SquareButton alloc] initWithPosX:row andY:col];
-				[button setBackgroundColor:squareColor];
+				[button setBackgroundColor: squareColor];
+				even=!even;
+				
 				
 				// add
 				[[self squares] addObject:button];

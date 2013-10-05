@@ -58,7 +58,7 @@
 		[[self mainView] animateClick:button withColor:[currentPlayer color]];
 		
 		// Change color of button
-		[button setBackgroundColor:[currentPlayer color]];
+//		[button setBackgroundColor:[currentPlayer color]];
 		
 		
 		// Switch player
