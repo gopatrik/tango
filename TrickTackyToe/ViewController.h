@@ -13,6 +13,10 @@
 @property IBOutlet UIView *mainView;
 @property IBOutlet UILabel *playerOneName;
 @property IBOutlet UILabel *playerTwoName;
+@property IBOutlet UILabel *playerTurnAnimation;
+
+@property IBOutlet UIView *playerDataView;
 
 - (void) animateClick:(SquareButton*) button withColor:(UIColor*)color;
+- (void) animateTurnCircleTo:(CGPoint)xy;
 @end

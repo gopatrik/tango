@@ -23,17 +23,14 @@
 	[self setMainView:view];
 	boards = [Board getBoards];
 	
-	playerOne = [[Player alloc] initWithName:@"patrik" andColor:[Toolbag colorFromHexString:@"#C15B40"]];
-	playerTwo = [[Player alloc] initWithName:@"simon" andColor:[Toolbag colorFromHexString:@"#7EAAB4"]];
+	playerOne = [[Player alloc] initWithName:@"Patrik" andColor:[Toolbag colorFromHexString:@"#7EAAB4"]];
+	playerTwo = [[Player alloc] initWithName:@"Simon" andColor:[Toolbag colorFromHexString:@"#C15B40"]];
 	
 	[[[self mainView] playerOneName] setText:[playerOne name]];
 	[[[self mainView] playerTwoName] setText:[playerTwo name]];
-
-	[[[self mainView] playerOneName] setBackgroundColor:[playerOne color]];
-	[[[self mainView] playerTwoName] setBackgroundColor:[playerTwo color]];
-
 	
 	currentPlayer = playerOne;
+	[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
 	return self;
 }
 
@@ -78,9 +75,16 @@
 
 - (void) nextPlayer {
 	if (currentPlayer == playerOne) {
+		[[self mainView] animateTurnCircleTo:[[[self mainView] playerTwoName] center]];
 		currentPlayer = playerTwo;
 	}else{
+		[[self mainView] animateTurnCircleTo:[[[self mainView] playerOneName] center]];
 		currentPlayer = playerOne;
 	}
+	
+	[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
 }
+
+
+
 @end

@@ -12,14 +12,13 @@
 #import "Board.h"
 #import "Toolbag.h"
 #import "TangoController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ();
 
 @end
 
 @implementation ViewController{
-
-	NSMutableArray *boards;
 	TangoController *tangoController;
 }
 @synthesize mainView;
@@ -31,7 +30,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	int squaresPerPlane = 9;
-	boards = [[NSMutableArray alloc] initWithCapacity:9];
 	
 	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#dddddd"]];
 
@@ -47,9 +45,15 @@
 	
 			int counter = 0;
 			for(id button in [board squares]) {
+				
+				// Touch listeners
 				[button addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
 				[button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-				[button setFrame:CGRectMake((counter%3)*buttonsize + (offset%3)*boardSize, (counter/3)* buttonsize + (offset/3)*boardSize, buttonsize-2, buttonsize-2)];
+				
+				// appearance
+				[button setFrame:CGRectMake((counter%3)*buttonsize + (offset%3)*boardSize, (counter/3)* buttonsize + (offset/3)*boardSize, buttonsize-1, buttonsize-1)];
+				
+				
 				[mainView addSubview:button];
 				counter +=1;
 				
@@ -60,8 +64,14 @@
 		}
 	}
 	
-	boards = [Board getBoards];
+	// Circle that moves back and forth
+	CGRect rect = [[self playerTurnAnimation] frame];
+	CGFloat labelheight = rect.size.height;
+	[[self playerTurnAnimation] setText:@""];
+	[[[self playerTurnAnimation] layer] setCornerRadius:(labelheight/2)];
 
+	
+	// init controller
 	tangoController = [[TangoController alloc] initWithView:self];
 }
 
@@ -69,17 +79,21 @@
 	[tangoController squarePressed:button];
 }
 
+- (void) animateTurnCircleTo:(CGPoint)xy {
+	CGFloat delta = ([[self playerTurnAnimation] center].x > xy.x) ? -5 : 5;
+	CGPoint bounceDelta = CGPointMake(xy.x + delta, xy.y);
+	
+	[UIView animateWithDuration:0.28 animations:^{
+		[[self playerTurnAnimation] setCenter:bounceDelta];
+	}completion:^(BOOL finished) {
+		[UIView animateWithDuration:0.05 animations:^{
+			[[self playerTurnAnimation] setCenter:xy];
+		}];
+	}];
+}
+
 - (void) buttonTouched:(SquareButton*) button {
-//	Board *board = [self getBoardFromButton:button];
-//	if (![button isOccupied] && [board isAvaliable]) {
-//		int constant = 6;
-//		int halfConstant = 3;
-//		[UIView animateWithDuration:0.02 animations:^{
-//			[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y+halfConstant, button.frame.size.width-constant, button.frame.size.height-constant)];
-//		
-//			[button setBackgroundColor:[currentPlayer color]];
-//		}];
-//	}
+
 }
 
 - (void) animateClick:(SquareButton*) button withColor:(UIColor *)color{
@@ -96,14 +110,6 @@
 			[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y-halfConstant, button.frame.size.width+constant, button.frame.size.height+constant)];
 		} completion:NO];
 	}];
-	
-		
-
-	
-//		[UIView animateWithDuration:0.05 animations:^{ // delay:0.01 options:NO
-//			[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y-halfConstant, button.frame.size.width+constant, button.frame.size.height+constant)];
-//		} completion:NO];
-
 }
 
 - (void)didReceiveMemoryWarning
