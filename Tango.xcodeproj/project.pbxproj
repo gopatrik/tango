@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0BACD117FDF3BC00672898 /* Toolbag.m */; };
+		5F9F77F0180046CF002054ED /* TangoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77EF180046CF002054ED /* TangoController.m */; };
+		5F9F77F318004748002054ED /* TangoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77F218004748002054ED /* TangoModel.m */; };
 		5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */; };
 		5FBD0AD117FB5FA200532A24 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBD0AD017FB5FA200532A24 /* Player.m */; };
 		5FBD0AD717FB788B00532A24 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBD0AD617FB788B00532A24 /* Board.m */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		5F0BACD017FDF3BC00672898 /* Toolbag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toolbag.h; sourceTree = "<group>"; };
 		5F0BACD117FDF3BC00672898 /* Toolbag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toolbag.m; sourceTree = "<group>"; };
+		5F9F77EE180046CF002054ED /* TangoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangoController.h; path = ../TangoController.h; sourceTree = "<group>"; };
+		5F9F77EF180046CF002054ED /* TangoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TangoController.m; path = ../TangoController.m; sourceTree = "<group>"; };
+		5F9F77F118004748002054ED /* TangoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TangoModel.h; sourceTree = "<group>"; };
+		5F9F77F218004748002054ED /* TangoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TangoModel.m; sourceTree = "<group>"; };
 		5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButton_SquareButton.m; sourceTree = "<group>"; };
 		5FBD0ACF17FB5FA100532A24 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		5FBD0AD017FB5FA200532A24 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -98,6 +104,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F9F77F418004787002054ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FC35FF417931A7A00FAE88A /* ViewController.h */,
+				5FC35FF517931A7A00FAE88A /* ViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5F9F77F5180047A0002054ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FD983B61799D9F900845799 /* UIButton_SquareButton.h */,
+				5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */,
+				5FBD0AD517FB788A00532A24 /* Board.h */,
+				5FBD0AD617FB788B00532A24 /* Board.m */,
+				5FBD0ACF17FB5FA100532A24 /* Player.h */,
+				5FBD0AD017FB5FA200532A24 /* Player.m */,
+				5F9F77F118004748002054ED /* TangoModel.h */,
+				5F9F77F218004748002054ED /* TangoModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5F9F77F61800485C002054ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F0BACD017FDF3BC00672898 /* Toolbag.h */,
+				5F0BACD117FDF3BC00672898 /* Toolbag.m */,
+				5F9F77EE180046CF002054ED /* TangoController.h */,
+				5F9F77EF180046CF002054ED /* TangoController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		5FC35FCA17931A7A00FAE88A = {
 			isa = PBXGroup;
 			children = (
@@ -132,21 +173,14 @@
 		5FC35FDC17931A7A00FAE88A /* Tango */ = {
 			isa = PBXGroup;
 			children = (
+				5FC35FDD17931A7A00FAE88A /* Supporting Files */,
 				5FC35FE517931A7A00FAE88A /* AppDelegate.h */,
 				5FC35FE617931A7A00FAE88A /* AppDelegate.m */,
-				5FD983B61799D9F900845799 /* UIButton_SquareButton.h */,
-				5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */,
 				5FC35FEE17931A7A00FAE88A /* MainStoryboard_iPhone.storyboard */,
 				5FC35FF117931A7A00FAE88A /* MainStoryboard_iPad.storyboard */,
-				5FC35FF417931A7A00FAE88A /* ViewController.h */,
-				5FC35FF517931A7A00FAE88A /* ViewController.m */,
-				5FC35FDD17931A7A00FAE88A /* Supporting Files */,
-				5FBD0AD517FB788A00532A24 /* Board.h */,
-				5FBD0AD617FB788B00532A24 /* Board.m */,
-				5FBD0ACF17FB5FA100532A24 /* Player.h */,
-				5FBD0AD017FB5FA200532A24 /* Player.m */,
-				5F0BACD017FDF3BC00672898 /* Toolbag.h */,
-				5F0BACD117FDF3BC00672898 /* Toolbag.m */,
+				5F9F77F5180047A0002054ED /* Models */,
+				5F9F77F418004787002054ED /* Views */,
+				5F9F77F61800485C002054ED /* Controllers */,
 			);
 			name = Tango;
 			path = TrickTackyToe;
@@ -305,6 +339,8 @@
 				5FBD0AD117FB5FA200532A24 /* Player.m in Sources */,
 				5FBD0AD717FB788B00532A24 /* Board.m in Sources */,
 				5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */,
+				5F9F77F0180046CF002054ED /* TangoController.m in Sources */,
+				5F9F77F318004748002054ED /* TangoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

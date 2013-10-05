@@ -43,7 +43,6 @@
 	for (int row = 0; row<squaresPerPlane/3; row++) {
 		for (int col = 0; col<squaresPerPlane/3; col++) {
 			Board *board = [[Board alloc] init];
-			//[boards addObject:board];
 	
 			int counter = 0;
 			for(id button in [board squares]) {
@@ -66,6 +65,9 @@
 	playerTwo = [[Player alloc] initWithName:@"simon" andColor:[Toolbag colorFromHexString:@"#7EAAB4"]];
 
 	currentPlayer = playerOne;
+	
+	[_playerOneName setText:[playerOne name]];
+	[_playerOneName setBackgroundColor:[playerOne color]];
 }
 
 - (void) nextPlayer {

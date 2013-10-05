@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 @property IBOutlet UIView *mainView;
+@property IBOutlet UILabel *playerOneName;
+@property IBOutlet UILabel *playerTwoName;
 @end
