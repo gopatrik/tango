@@ -3,7 +3,7 @@
 //  TrickTackyToe
 //
 //  Created by Patrik Göthe on 7/14/13.
-//  Copyright (c) 2013 Patrik Göthe & Ville Petersson. All rights reserved.
+//  Copyright (c) 2013 Patrik Göthe. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -31,12 +31,23 @@
 	
 	int squaresPerPlane = 9;
 	
-	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#bdbdbd"]];
-
-	CGFloat buttonsize = mainView.bounds.size.width/(squaresPerPlane);
-
+	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#aaaaaa"]];
+	
+	CGFloat buttonsize;
+	CGFloat boardSize;
+	
+	if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+		([UIScreen mainScreen].scale == 2.0)) {
+		// Retina display
+		buttonsize = mainView.bounds.size.width/(squaresPerPlane)-0.1;
+		boardSize = 3*buttonsize+0.5;
+	} else {
+		// non-Retina display
+		buttonsize = mainView.bounds.size.width/(squaresPerPlane)-0.5;
+		boardSize = 3*buttonsize+1.5;
+	}
+	
 	int offset = 0;
-	CGFloat boardSize = 3*buttonsize;
 	int buttonNo = 1;
 	
 	for (int row = 0; row<squaresPerPlane/3; row++) {
@@ -51,8 +62,12 @@
 				[button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 				
 				// appearance
-				[button setFrame:CGRectMake((counter%3)*buttonsize + (offset%3)*boardSize, (counter/3)* buttonsize + (offset/3)*boardSize, buttonsize-1, buttonsize-1)];
+				[button setFrame:CGRectMake((counter%3)*buttonsize + (offset%3)*boardSize, (counter/3)* buttonsize + (offset/3)*boardSize, buttonsize-0.5, buttonsize-0.5)];
 				
+				if ((counter + 1) % 3 == 0) {
+					// greater distance to right
+					// place
+				}
 				
 				[mainView addSubview:button];
 				counter +=1;
@@ -119,6 +134,14 @@
 			
 			
 		} completion:NO];
+	}];
+}
+
+- (void) animateWin {
+	[UIView animateWithDuration:0.1 animations:^{
+		[[self playerTurnAnimation] setFrame:CGRectMake([[self playerTurnAnimation] frame].origin.x, [[self playerTurnAnimation] frame].origin.y, 100, 100)];
+	} completion:^(BOOL finished) {
+
 	}];
 }
 

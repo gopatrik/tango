@@ -3,7 +3,7 @@
 //  TrickTackyToe
 //
 //  Created by Patrik Göthe on 10/1/13.
-//  Copyright (c) 2013 Patrik Göthe & Ville Petersson. All rights reserved.
+//  Copyright (c) 2013 Patrik Göthe. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

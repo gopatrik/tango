@@ -3,7 +3,7 @@
 //  TrickTackyToe
 //
 //  Created by Patrik Göthe on 7/14/13.
-//  Copyright (c) 2013 Patrik Göthe & Ville Petersson. All rights reserved.
+//  Copyright (c) 2013 Patrik Göthe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,6 +15,7 @@
 @property IBOutlet UILabel *playerTwoName;
 @property IBOutlet UILabel *playerTurnAnimation;
 
+- (void) animateWin;
 - (void) animateClick:(SquareButton*) button withColor:(UIColor*)color;
 - (void) animateTurnCircleTo:(CGPoint)xy withColor:(UIColor*)color;
 @end

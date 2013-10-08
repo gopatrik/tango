@@ -267,7 +267,7 @@
 			attributes = {
 				CLASSPREFIX = Tic;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Patrik Göthe & Ville Petersson";
+				ORGANIZATIONNAME = "Patrik Göthe";
 			};
 			buildConfigurationList = 5FC35FCE17931A7A00FAE88A /* Build configuration list for PBXProject "Tango" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -423,7 +423,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,7 +448,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

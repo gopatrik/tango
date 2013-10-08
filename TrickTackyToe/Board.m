@@ -3,7 +3,7 @@
 //  Tango
 //
 //  Created by Patrik Göthe on 10/1/13.
-//  Copyright (c) 2013 Patrik Göthe & Ville Petersson. All rights reserved.
+//  Copyright (c) 2013 Patrik Göthe. All rights reserved.
 //
 
 #import "Board.h"
@@ -52,9 +52,9 @@ static NSMutableArray *boards;
 		BOOL previous = [board isAvaliable];
 		[board setIsAvaliable:avaliable];
 		if(avaliable){
-			[self lightUpBoard:board];
+			[board lightUpBoard];
 		}else if(previous != avaliable){ // make board inactive if was previously active
-			[self delightBoard:board];
+			[board delightBoard];
 		}
 	}
 }
@@ -63,28 +63,50 @@ static NSMutableArray *boards;
 	[self setAviabilityOfAllBoardsTo:avaliable];
 	[board setIsAvaliable:!avaliable];
 	if(!avaliable){
-		[self lightUpBoard:board];
+		[board lightUpBoard];
 	}
 }
 
-+ (void) lightUpBoard: (Board*)board {
-	for (SquareButton *sq in [board squares]) {
-		if(![sq isOccupied]){
-			[UIView animateWithDuration:0.1 animations:^{
-				[sq setBackgroundColor: [Toolbag colorFromHexString:@"#A7EFDB"]];
-			} completion:NO];
+- (void) lightUpBoard {
+	if (![self isWon]) {
+		for (SquareButton *sq in [self squares]) {
+			if(![sq isOccupied]){
+				[UIView animateWithDuration:0.1 animations:^{
+					[sq setBackgroundColor: [Toolbag colorFromHexString:@"#BBDCCC"]];//A7EFDB
+				} completion:NO];
+			}
 		}
 	}
 }
 
-+ (void) delightBoard: (Board*)board {
-	for (SquareButton *sq in [board squares]) {
+- (void) delightBoard {
+	// generate brighter color
+	UIColor *colBright;
+	if ([self isWon]) {
+		colBright = [self brightenColor:[[self wonBy] color] by:60];
+	}
+	
+	for (SquareButton *sq in [self squares]) {
 		if(![sq isOccupied]){
-			[UIView animateWithDuration:0.1 animations:^{
-				[sq setBackgroundColor: squareColor];
-			} completion:NO];
+			[sq setBackgroundColor:  ([self isWon]) ? colBright : squareColor];
+		}else if([self isWon] && ![[self wonBy] isEqual:[sq occupator]]){
+			// [sq setBackgroundColor: [self brightenColor:[[sq occupator] color] by:80]];
+			// [sq setBackgroundColor: [self brightenColor:[[[sq occupator] color] colorWithAlphaComponent:0.1] by:80]];
+			[sq setBackgroundColor: [[self wonBy] color]];
 		}
 	}
+}
+
+// brightness between 0 and 255
+- (UIColor*) brightenColor: (UIColor*)color by: (CGFloat)brightness {
+	CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
+	[color getRed:&red green:&green blue:&blue alpha:&alpha];
+
+	red = red + (brightness/255.0);
+	green = green + (brightness/255.0);
+	blue = blue + (brightness/255.0);
+
+	return [UIColor colorWithRed:red green:green blue:blue alpha:1];
 }
 
 + (NSMutableArray*) getBoards {
@@ -107,9 +129,15 @@ static NSMutableArray *boards;
 	
 	for(int i = 0; i < 8; i++){
 		if([self hasSameOwner:matrix[i][0] as:matrix[i][1] and:matrix[i][2]]){
-			NSLog(@"board won!");
 			[self setIsWon:true];
+			[self delightBoard];
 		}
+	}
+}
+
+- (void) colorBoard: (UIColor*)color {
+	for (SquareButton *sq in [self squares]) {
+		[sq setBackgroundColor:color];
 	}
 }
 
@@ -117,7 +145,10 @@ static NSMutableArray *boards;
 - (BOOL) hasSameOwner: (int)first as:(int)second and:(int)third {
 	Player *p = [[self squares][first] occupator];
 	if([p isEqual: [[self squares][second] occupator]]){
-		return [p isEqual:[[self squares][third] occupator]];
+		if ([p isEqual:[[self squares][third] occupator]]) {
+			[self setWonBy:p];
+			return true;
+		}
 	}
 	return false;
 }
