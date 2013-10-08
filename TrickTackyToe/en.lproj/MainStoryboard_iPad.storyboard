@@ -44,6 +44,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="iRR-4a-5iE" id="Vjf-ZY-TU9"/>
                         <outlet property="mainView" destination="Rkm-yZ-lS7" id="dPf-Cw-40W"/>
                         <outlet property="playerOneName" destination="RRb-QG-OB8" id="1mK-FT-iqq"/>
                         <outlet property="playerTurnAnimation" destination="IaB-cv-2ms" id="nqA-ct-1r8"/>

@@ -10,6 +10,8 @@
 
 @interface Toolbag : NSObject
 
+@property UIColor* playerOneColor;
+
 
 + (UIColor*)colorFromHexString:(NSString *) hexString;
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0BACD117FDF3BC00672898 /* Toolbag.m */; };
+		5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BEADE18048F27003D7D83 /* ColorScheme.m */; };
 		5F9F77F0180046CF002054ED /* TangoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77EF180046CF002054ED /* TangoController.m */; };
 		5F9F77F318004748002054ED /* TangoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77F218004748002054ED /* TangoModel.m */; };
 		5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		5F0BACD017FDF3BC00672898 /* Toolbag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toolbag.h; sourceTree = "<group>"; };
 		5F0BACD117FDF3BC00672898 /* Toolbag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toolbag.m; sourceTree = "<group>"; };
+		5F7BEADD18048F27003D7D83 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorScheme.h; sourceTree = "<group>"; };
+		5F7BEADE18048F27003D7D83 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorScheme.m; sourceTree = "<group>"; };
 		5F9F77EE180046CF002054ED /* TangoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangoController.h; path = ../TangoController.h; sourceTree = "<group>"; };
 		5F9F77EF180046CF002054ED /* TangoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TangoController.m; path = ../TangoController.m; sourceTree = "<group>"; };
 		5F9F77F118004748002054ED /* TangoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TangoModel.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				5FBD0AD017FB5FA200532A24 /* Player.m */,
 				5F9F77F118004748002054ED /* TangoModel.h */,
 				5F9F77F218004748002054ED /* TangoModel.m */,
+				5F7BEADD18048F27003D7D83 /* ColorScheme.h */,
+				5F7BEADE18048F27003D7D83 /* ColorScheme.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			files = (
 				5FC35FE317931A7A00FAE88A /* main.m in Sources */,
 				5FC35FE717931A7A00FAE88A /* AppDelegate.m in Sources */,
+				5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */,
 				5FC35FF617931A7A00FAE88A /* ViewController.m in Sources */,
 				5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */,
 				5FBD0AD117FB5FA200532A24 /* Player.m in Sources */,

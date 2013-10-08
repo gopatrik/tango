@@ -43,6 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="3" id="cHl-t9-S7r"/>
                         <outlet property="mainView" destination="dYu-l5-3xQ" id="5Rf-zp-9qP"/>
                         <outlet property="playerOneName" destination="PTg-IP-Pdv" id="hgk-m1-o6v"/>
                         <outlet property="playerTurnAnimation" destination="UZn-GJ-qHN" id="uF7-S4-m44"/>

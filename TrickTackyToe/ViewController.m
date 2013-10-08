@@ -10,7 +10,6 @@
 #import "UIButton_SquareButton.h"
 #import "Player.h"
 #import "Board.h"
-#import "Toolbag.h"
 #import "TangoController.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -30,8 +29,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	int squaresPerPlane = 9;
-	
-	[mainView setBackgroundColor:[Toolbag colorFromHexString:@"#aaaaaa"]];
 	
 	CGFloat buttonsize;
 	CGFloat boardSize;
@@ -100,8 +97,7 @@
 	
 	[UIView animateWithDuration:0.2 animations:^{
 		[[self playerTurnAnimation] setCenter:bounceDelta];
-		[[self playerTurnAnimation] setBackgroundColor:color]; // cant animate this
-		//[[[self playerTurnAnimation] layer] setBackgroundColor:[color CGColor]];
+		[[self playerTurnAnimation] setBackgroundColor:color]; // (cant animate this, yet)
 	}completion:^(BOOL finished) {
 		[UIView animateWithDuration:0.05 animations:^{
 			[[self playerTurnAnimation] setCenter:xy];
@@ -114,25 +110,15 @@
 }
 
 - (void) animateClick:(SquareButton*) button withColor:(UIColor *)color{
-	CGFloat constant = button.frame.size.width;//12;
+	CGFloat constant = button.frame.size.width;
 	CGFloat halfConstant = constant/2;
 	
 	[UIView animateWithDuration:0.1 animations:^{
-		//[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y+halfConstant, button.frame.size.width-constant, button.frame.size.height-constant)];
-		
 		[button setFrame:CGRectMake(button.frame.origin.x+halfConstant, button.frame.origin.y, 0, button.frame.size.height)];
-		
-		
-//		[button setBackgroundColor:color];
-		
 	} completion:^(BOOL finished) {
 		[UIView animateWithDuration:0.1 animations:^{
 			[button setBackgroundColor:color];
-			//[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y-halfConstant, button.frame.size.width+constant, button.frame.size.height+constant)];
-			
 			[button setFrame:CGRectMake(button.frame.origin.x-halfConstant, button.frame.origin.y, constant, button.frame.size.height)];
-			
-			
 		} completion:NO];
 	}];
 }

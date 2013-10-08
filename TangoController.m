@@ -10,7 +10,7 @@
 #import "Board.h"
 #import "ViewController.h"
 #import "Player.h"
-#import "Toolbag.h"
+#import "ColorScheme.h"
 
 @implementation TangoController{
 	Player* playerOne;
@@ -23,16 +23,28 @@
 
 - (TangoController*) initWithView:(ViewController *)view{
 	[self setMainView:view];
+	
+	// board tracking
 	boards = [Board getBoards];
 	
-	playerOne = [[Player alloc] initWithName:@"Patrik" andColor:[Toolbag colorFromHexString:@"#8CD1F4"]]; //@"#8CD1F4"]];
-	playerTwo = [[Player alloc] initWithName:@"Simon" andColor:[Toolbag colorFromHexString:@"#E89797"]]; //@"#D9917B"]];
+	// Set colors
+	ColorScheme *colorScheme = [[ColorScheme alloc] initWithPlayerOneColor:@"#8CD1F4" playerTwoColor:@"#E89797" backgroundColor:@"#ffffff" highlightColor:@"#BBDCCC" squareColor:@"#fcfcfc" boardBackgroundColor:@"#aaaaaa"];
 	
+	[[[self mainView] background] setBackgroundColor:[colorScheme backgroundColor]];
+	[[[self mainView] mainView] setBackgroundColor:[colorScheme boardBackgroundColor]];
+	
+	// init players
+	playerOne = [[Player alloc] initWithName:@"Patrik" andColor:[colorScheme playerOneColor]]; //@"#8CD1F4"]];
+	playerTwo = [[Player alloc] initWithName:@"Simon" andColor:[colorScheme playerTwoColor]]; //@"#D9917B"]];
+	currentPlayer = playerOne;
+	
+	// init labels
 	[[[self mainView] playerOneName] setText:[playerOne name]];
 	[[[self mainView] playerTwoName] setText:[playerTwo name]];
 	
-	currentPlayer = playerOne;
+	// initiate turn indicator
 	[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
+	
 	return self;
 }
 
