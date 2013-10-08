@@ -28,54 +28,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-	int squaresPerPlane = 9;
-	
-	CGFloat buttonsize;
-	CGFloat boardSize;
-	
-	if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
-		([UIScreen mainScreen].scale == 2.0)) {
-		// Retina display
-		buttonsize = mainView.bounds.size.width/(squaresPerPlane)-0.1;
-		boardSize = 3*buttonsize+0.5;
-	} else {
-		// non-Retina display
-		buttonsize = mainView.bounds.size.width/(squaresPerPlane)-0.5;
-		boardSize = 3*buttonsize+1.5;
-	}
-	
-	int offset = 0;
-	int buttonNo = 1;
-	
-	for (int row = 0; row<squaresPerPlane/3; row++) {
-		for (int col = 0; col<squaresPerPlane/3; col++) {
-			Board *board = [[Board alloc] init];
-	
-			int counter = 0;
-			for(id button in [board squares]) {
-				
-				// Touch listeners
-				[button addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
-				[button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-				
-				// appearance
-				[button setFrame:CGRectMake((counter%3)*buttonsize + (offset%3)*boardSize, (counter/3)* buttonsize + (offset/3)*boardSize, buttonsize-0.5, buttonsize-0.5)];
-				
-				if ((counter + 1) % 3 == 0) {
-					// greater distance to right
-					// place
-				}
-				
-				[mainView addSubview:button];
-				counter +=1;
-				
-				[button setButtonId:buttonNo];
-				buttonNo++;
-			}
-			offset += 1;
-		}
-	}
-	
 	// Circle that moves back and forth
 	CGRect rect = [[self playerTurnAnimation] frame];
 	CGFloat labelheight = rect.size.height;
