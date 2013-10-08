@@ -164,6 +164,7 @@
 - (BOOL) hasSameOwner: (int)first as:(int)second and:(int)third {
 	Player *p = [boards[first] wonBy];
 	if([p isEqual: [boards[second] wonBy]]){
+
 		if ([p isEqual:[boards[third] wonBy]]) {
 			[self andTheWinnerIs:p];
 			return true;
@@ -173,10 +174,10 @@
 }
 
 - (void) andTheWinnerIs:(Player*)player {
-	if ([player isEqual:playerOne]) {
-		[[self mainView] animateTurnCircleTo: ([player isEqual:playerOne]) ? [[[self mainView] playerOneName] center] : [[[self mainView] playerTwoName] center] withColor:[player color]];
-		[[self mainView] animateWin];
-	}
+	// [[self mainView] animateTurnCircleTo: ([player isEqual:playerOne]) ? [[[self mainView] playerOneName] center] : [[[self mainView] playerTwoName] center] withColor:[player color]];
+//	[[self mainView] animateWin];
+	
+	[(([player isEqual:playerOne]) ? [[self mainView] playerOneName] : [[self mainView] playerTwoName]) setText:@"winner"];
 }
 
 - (Board*) getBoardFromButton:(SquareButton*)button {

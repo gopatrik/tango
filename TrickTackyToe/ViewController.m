@@ -76,11 +76,11 @@
 }
 
 - (void) animateWin {
-	[UIView animateWithDuration:0.1 animations:^{
-		[[self playerTurnAnimation] setFrame:CGRectMake([[self playerTurnAnimation] frame].origin.x, [[self playerTurnAnimation] frame].origin.y, 100, 100)];
-	} completion:^(BOOL finished) {
-
-	}];
+//	[UIView animateWithDuration:0.1 animations:^{
+//		[[self playerTurnAnimation] setFrame:CGRectMake([[self playerTurnAnimation] frame].origin.x, [[self playerTurnAnimation] frame].origin.y, 100, 100)];
+//	} completion:^(BOOL finished) {
+//
+//	}];
 }
 
 - (void)didReceiveMemoryWarning
