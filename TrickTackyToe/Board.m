@@ -90,8 +90,6 @@ static NSMutableArray *boards;
 		if(![sq isOccupied]){
 			[sq setBackgroundColor:  ([self isWon]) ? colBright : squareColor];
 		}else if([self isWon] && ![[self wonBy] isEqual:[sq occupator]]){
-			// [sq setBackgroundColor: [self brightenColor:[[sq occupator] color] by:80]];
-			// [sq setBackgroundColor: [self brightenColor:[[[sq occupator] color] colorWithAlphaComponent:0.1] by:80]];
 			[sq setBackgroundColor: [[self wonBy] color]];
 		}
 	}
