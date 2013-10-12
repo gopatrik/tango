@@ -19,6 +19,7 @@
 	NSMutableArray* boards;
 	SquareButton* LastSquareOccupiedByPlayerOne;
 	SquareButton* LastSquareOccupiedByPlayerTwo;
+	GCHelper *gameCenter;
 }
 
 - (TangoController*) initWithView:(ViewController *)view{
@@ -45,6 +46,9 @@
 	
 	// initiate turn indicator
 	[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
+	
+	// gamecenter
+	gameCenter = [[GCHelper alloc] init];
 	
 	return self;
 }

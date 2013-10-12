@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UIButton_SquareButton.h"
 #import "ViewController.h"
+#import "GCHelper.h"
 
 @interface TangoController : NSObject
 @property (nonatomic) ViewController *mainView;

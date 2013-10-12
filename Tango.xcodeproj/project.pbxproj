@@ -11,6 +11,8 @@
 		5F3950AD1807516B00682468 /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3950AC1807516B00682468 /* GCHelper.m */; };
 		5F3950AF1807537200682468 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3950AE1807537200682468 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BEADE18048F27003D7D83 /* ColorScheme.m */; };
+		5F98841D1809BD9500F428BC /* MatchMakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F98841C1809BD9500F428BC /* MatchMakerViewController.m */; };
+		5F9884201809CA2000F428BC /* GCTurnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F98841F1809CA2000F428BC /* GCTurnController.m */; };
 		5F9F77F0180046CF002054ED /* TangoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77EF180046CF002054ED /* TangoController.m */; };
 		5F9F77F318004748002054ED /* TangoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77F218004748002054ED /* TangoModel.m */; };
 		5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */; };
@@ -53,6 +55,10 @@
 		5F3950AE1807537200682468 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		5F7BEADD18048F27003D7D83 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorScheme.h; sourceTree = "<group>"; };
 		5F7BEADE18048F27003D7D83 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorScheme.m; sourceTree = "<group>"; };
+		5F98841B1809BD9500F428BC /* MatchMakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchMakerViewController.h; sourceTree = "<group>"; };
+		5F98841C1809BD9500F428BC /* MatchMakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchMakerViewController.m; sourceTree = "<group>"; };
+		5F98841E1809CA2000F428BC /* GCTurnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTurnController.h; sourceTree = "<group>"; };
+		5F98841F1809CA2000F428BC /* GCTurnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTurnController.m; sourceTree = "<group>"; };
 		5F9F77EE180046CF002054ED /* TangoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangoController.h; path = ../TangoController.h; sourceTree = "<group>"; };
 		5F9F77EF180046CF002054ED /* TangoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TangoController.m; path = ../TangoController.m; sourceTree = "<group>"; };
 		5F9F77F118004748002054ED /* TangoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TangoModel.h; sourceTree = "<group>"; };
@@ -148,6 +154,10 @@
 				5F9F77EF180046CF002054ED /* TangoController.m */,
 				5F3950AB1807516B00682468 /* GCHelper.h */,
 				5F3950AC1807516B00682468 /* GCHelper.m */,
+				5F98841B1809BD9500F428BC /* MatchMakerViewController.h */,
+				5F98841C1809BD9500F428BC /* MatchMakerViewController.m */,
+				5F98841E1809CA2000F428BC /* GCTurnController.h */,
+				5F98841F1809CA2000F428BC /* GCTurnController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +358,7 @@
 			files = (
 				5FC35FE317931A7A00FAE88A /* main.m in Sources */,
 				5FC35FE717931A7A00FAE88A /* AppDelegate.m in Sources */,
+				5F9884201809CA2000F428BC /* GCTurnController.m in Sources */,
 				5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */,
 				5FC35FF617931A7A00FAE88A /* ViewController.m in Sources */,
 				5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */,
@@ -355,6 +366,7 @@
 				5FBD0AD717FB788B00532A24 /* Board.m in Sources */,
 				5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */,
 				5F9F77F0180046CF002054ED /* TangoController.m in Sources */,
+				5F98841D1809BD9500F428BC /* MatchMakerViewController.m in Sources */,
 				5F9F77F318004748002054ED /* TangoModel.m in Sources */,
 				5F3950AD1807516B00682468 /* GCHelper.m in Sources */,
 			);
