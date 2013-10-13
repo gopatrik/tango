@@ -19,7 +19,8 @@
 	NSMutableArray* boards;
 	SquareButton* LastSquareOccupiedByPlayerOne;
 	SquareButton* LastSquareOccupiedByPlayerTwo;
-	GCHelper *gameCenter;
+	
+	GCTurnBasedMatchHelper *gameCenter;
 }
 
 - (TangoController*) initWithView:(ViewController *)view{
@@ -47,8 +48,8 @@
 	// initiate turn indicator
 	[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
 	
-	// gamecenter
-	gameCenter = [[GCHelper alloc] init];
+	// game center
+	gameCenter = [GCTurnBasedMatchHelper sharedInstance];
 	
 	return self;
 }
@@ -178,9 +179,6 @@
 }
 
 - (void) andTheWinnerIs:(Player*)player {
-	// [[self mainView] animateTurnCircleTo: ([player isEqual:playerOne]) ? [[[self mainView] playerOneName] center] : [[[self mainView] playerTwoName] center] withColor:[player color]];
-//	[[self mainView] animateWin];
-	
 	[(([player isEqual:playerOne]) ? [[self mainView] playerOneName] : [[self mainView] playerTwoName]) setText:@"winner"];
 }
 
@@ -196,8 +194,21 @@
 		currentPlayer = playerOne;
 		[[self mainView] animateTurnCircleTo:[[[self mainView] playerOneName] center] withColor:[currentPlayer color]];
 	}
-	
-	//[[[self mainView] playerTurnAnimation] setBackgroundColor:[currentPlayer color]];
+}
+
+
+// Game center
+- (void) findOpponent {
+	[gameCenter findMatchWithMinPlayers:2 maxPlayers:2 viewController:[self mainView]];
+}
+
+- (void) getOpponentName {
+	[[gameCenter currentMatch] participants];
+}
+
+- (void) handleInvite {
+
+//	[[gameCenter handleInviteFromGameCenter:];
 }
 
 
