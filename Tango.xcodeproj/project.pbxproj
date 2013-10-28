@@ -11,6 +11,9 @@
 		5F3950AF1807537200682468 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3950AE1807537200682468 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5F7774021809FA6000E4C0AB /* GCTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7774011809FA6000E4C0AB /* GCTurnBasedMatchHelper.m */; };
 		5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BEADE18048F27003D7D83 /* ColorScheme.m */; };
+		5F9335DF180ADFFC0063A3A1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9335DE180ADFFC0063A3A1 /* MainMenu.m */; };
+		5F9335E5180AE8430063A3A1 /* SlideInViewFromRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9335E4180AE8430063A3A1 /* SlideInViewFromRight.m */; };
+		5F9335E9180AE8A50063A3A1 /* SlideInViewFromLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9335E8180AE8A50063A3A1 /* SlideInViewFromLeft.m */; };
 		5F9F77F0180046CF002054ED /* TangoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77EF180046CF002054ED /* TangoController.m */; };
 		5F9F77F318004748002054ED /* TangoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F77F218004748002054ED /* TangoModel.m */; };
 		5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2F36017949A00001C0D25 /* UIButton_SquareButton.m */; };
@@ -53,6 +56,12 @@
 		5F7774011809FA6000E4C0AB /* GCTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 		5F7BEADD18048F27003D7D83 /* ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorScheme.h; sourceTree = "<group>"; };
 		5F7BEADE18048F27003D7D83 /* ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorScheme.m; sourceTree = "<group>"; };
+		5F9335DD180ADFFC0063A3A1 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		5F9335DE180ADFFC0063A3A1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		5F9335E3180AE8430063A3A1 /* SlideInViewFromRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideInViewFromRight.h; sourceTree = "<group>"; };
+		5F9335E4180AE8430063A3A1 /* SlideInViewFromRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideInViewFromRight.m; sourceTree = "<group>"; };
+		5F9335E7180AE8A50063A3A1 /* SlideInViewFromLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideInViewFromLeft.h; sourceTree = "<group>"; };
+		5F9335E8180AE8A50063A3A1 /* SlideInViewFromLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideInViewFromLeft.m; sourceTree = "<group>"; };
 		5F9F77EE180046CF002054ED /* TangoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangoController.h; path = ../TangoController.h; sourceTree = "<group>"; };
 		5F9F77EF180046CF002054ED /* TangoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TangoController.m; path = ../TangoController.m; sourceTree = "<group>"; };
 		5F9F77F118004748002054ED /* TangoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TangoModel.h; sourceTree = "<group>"; };
@@ -113,11 +122,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F9335E6180AE8860063A3A1 /* UIStoryBoardSegues */ = {
+			isa = PBXGroup;
+			children = (
+				5F9335E3180AE8430063A3A1 /* SlideInViewFromRight.h */,
+				5F9335E4180AE8430063A3A1 /* SlideInViewFromRight.m */,
+				5F9335E7180AE8A50063A3A1 /* SlideInViewFromLeft.h */,
+				5F9335E8180AE8A50063A3A1 /* SlideInViewFromLeft.m */,
+			);
+			name = UIStoryBoardSegues;
+			sourceTree = "<group>";
+		};
 		5F9F77F418004787002054ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5FC35FF417931A7A00FAE88A /* ViewController.h */,
 				5FC35FF517931A7A00FAE88A /* ViewController.m */,
+				5F9335DD180ADFFC0063A3A1 /* MainMenu.h */,
+				5F9335DE180ADFFC0063A3A1 /* MainMenu.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,6 +170,7 @@
 				5F9F77EF180046CF002054ED /* TangoController.m */,
 				5F7774001809FA6000E4C0AB /* GCTurnBasedMatchHelper.h */,
 				5F7774011809FA6000E4C0AB /* GCTurnBasedMatchHelper.m */,
+				5F9335E6180AE8860063A3A1 /* UIStoryBoardSegues */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -346,8 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9335E9180AE8A50063A3A1 /* SlideInViewFromLeft.m in Sources */,
 				5FC35FE317931A7A00FAE88A /* main.m in Sources */,
 				5FC35FE717931A7A00FAE88A /* AppDelegate.m in Sources */,
+				5F9335E5180AE8430063A3A1 /* SlideInViewFromRight.m in Sources */,
 				5F7BEADF18048F27003D7D83 /* ColorScheme.m in Sources */,
 				5FC35FF617931A7A00FAE88A /* ViewController.m in Sources */,
 				5FB2F36117949A00001C0D25 /* UIButton_SquareButton.m in Sources */,
@@ -357,6 +382,7 @@
 				5F0BACD217FDF3BC00672898 /* Toolbag.m in Sources */,
 				5F9F77F0180046CF002054ED /* TangoController.m in Sources */,
 				5F9F77F318004748002054ED /* TangoModel.m in Sources */,
+				5F9335DF180ADFFC0063A3A1 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

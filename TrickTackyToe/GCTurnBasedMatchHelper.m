@@ -124,7 +124,8 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
 				NSLog(@"1 count: %d",[[GKLocalPlayer localPlayer] friends].count);
 
 				// invoke bool wait until friends loaded...
-				[self handleInviteFromGameCenter:players];
+				 
+			//!! 	[self handleInviteFromGameCenter:players];
 			 }
 		 }
 	 }];

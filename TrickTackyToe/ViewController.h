@@ -20,6 +20,4 @@
 - (void) animateClick:(SquareButton*) button withColor:(UIColor*)color;
 - (void) animateTurnCircleTo:(CGPoint)xy withColor:(UIColor*)color;
 
-- (IBAction)switchView;
-
 @end
